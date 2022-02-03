@@ -16,6 +16,7 @@ class Post(models.Model):
 
     post_description = models.CharField(max_length=1000)
     post_img = models.CharField(max_length=1000)
+    post_category=models.CharField(max_length=50,choices=category,null=True)
     user = models.ForeignKey(User, on_delete= models.CASCADE)
 
 
